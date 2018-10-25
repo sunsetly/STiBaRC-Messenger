@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="icon" type="image/png" href="icon.png">
+    <title>Login - STiBaRC Messenger</title>
+    <script type="text/javascript">
+        if (("standalone" in window.navigator) && window.navigator.standalone) {
+            var noddy, remotes = false;
+            document.addEventListener('click', function (event) {
+                noddy = event.target;
+                while (noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+                    noddy = noddy.parentNode;
+                }
+                if ('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes)) {
+                    event.preventDefault();
+                    document.location.href = noddy.href;
+                }
+            }, false);
+        }
+    </script>
+    <link rel="stylesheet" href="css/global.css">
+    <link href="css/login.css" rel="stylesheet">
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <div id="main">
+        <h2>Login:</h2>
+        <div id="logintip">
+            Log in with your STiBaRC account. Don't have a STiBaRC account? <a href="https://stibarc.gq/privacy.html">Register</a>!
+        </div>
+        <div id="badnamepass" style="display: none">Invalid username or password!<br><br></div>
+        <div id="blank" style="display: none">Username or password cannot be blank!<br><br></div>
+        <h4>Username</h4> <input id="username" type="text"><br><br>
+        <h4>Password</h4> <input id="password" type="password"><br><br>
+        <button id="login">Login</button><br><br>
+    </div>
+    <br>
+    <footer>
+        <div id="footerout"><a href="index.html" class="button">Back</a><br /></div>
+        <br /><a href="https://stibarc.gq/privacy.html" target="_blank" class="button">Privacy</a> <a href="https://stibarc.gq/tos.html" target="_blank" class="button">Terms of Service</a><br />
+        <br>
+        Icon by Alex Savon<br />
+        &copy; 2018 STiBaRC
+    </footer>
+</body>
+</html>

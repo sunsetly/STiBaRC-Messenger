@@ -1,0 +1,64 @@
+#inputbox {
+    position: sticky;
+    background-color: #FFFFFF;
+    word-wrap: break-word;
+    padding: 15px;
+    border-radius: 15px;
+    bottom: 0;
+}
+#top {
+    position: sticky;
+    background-color: #49B9CA;
+    top: 0;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 15px;
+    border-radius: 15px;
+}
+#input {
+	height: 100%;
+	width: 90%;
+}
+.buttons {
+    display: inline-block;
+    float: right;
+    font-weight: bold;
+}
+
+.darkbutton {
+    display: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    width: 100%;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#send {
+	height: 100%;
+	width: 8%;
+	float: right;
+}
+#chatstuffs {
+    background-color: #FFFFFF;
+    word-wrap: break-word;
+    padding: 15px;
+    border-radius: 15px;
+}
+#backframe {
+	left: 0;
+}
+#backbutton {
+	height: 15px;
+	width: 15px;
+	left: 0;
+}
+.chatbox {
+    background-color: #98DFF3;
+    word-wrap: break-word;
+    padding: 10px;
+    border-radius: 10px;
+}

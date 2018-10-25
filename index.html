@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!--Apple Crap-->
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="apple-mobile-web-app-title" content="STiBaRC Messenger">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script type="text/javascript">
+
+        if (("standalone" in window.navigator) && window.navigator.standalone) {
+
+            var noddy, remotes = false;
+
+            document.addEventListener('click', function (event) {
+
+                noddy = event.target;
+
+                while (noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+                    noddy = noddy.parentNode;
+                }
+
+                if ('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes)) {
+                    event.preventDefault();
+                    document.location.href = noddy.href;
+                }
+
+            }, false);
+        }
+    </script>
+    <!--End Apple Crap-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-title" content="STiBaRC Messenger">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <title>STiBaRC Messenger</title>
+    <script src="js/notifs.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div id="loggedoutcontainer" style="text-align:center;display:none">
+        <div id="messengersti">
+            <span><img src="logo.png" id="logo"></span><br>
+            <h2><b>STiBaRC Messenger</b></h2>
+            From the team that brought you STiBaRC, STiBaRC Messenger is a messaging client that allows users to send and recieve instant messages.<br />
+            <h2><b>Ready to Start?</b></h2>
+            To use STiBaRC Messenger, all you need is your STiBaRC account!<br />
+            <br /><button id="loginbutton"><h1>Log in</h1></button><br /><br />
+            <a href="https://stibarc.gq/register.html">Or register...</a>
+        </div>
+        <br />
+        <footer>
+            <div id="footerout">
+            <br /><a href="https://stibarc.gq/privacy.html" target="_blank" class="button">Privacy</a> <a href="https://stibarc.gq/tos.html" target="_blank" class="button">Terms of Service</a><br />
+            <br />
+            Icon by Alex Savon<br />
+            &copy; 2018 STiBaRC<br />
+                </div>
+        </footer>
+    </div>
+    <div id="loggedincontainer">
+        <div id="header">
+            <span><img src="logo.png" id="logo"></span><br>
+            <span id="loggedin">
+                <span class="buttons">
+                    <a href="newchat.html" class="button">New chat</a>
+                    <a href="index.html" class="button">Refresh</a>
+                </span>
+            </span>
+            <span id="loggedin" style="display: none;">
+                <span class="buttons"><a href="newpost.html" class="button">New post</a> <a href="editprofile.html" id="edit" class="button">Edit profile</a> <a href="search.html" class="button">Search</a></span>
+            </span>
+        </div><br />
+        <div id="mainblobwithlist">Loading messages...</div><br />
+        <footer>
+            <div id="footerin"><a href="logout.html" class="button">Log out</a><br /></div>
+            <br /><a href="https://stibarc.gq/privacy.html" target="_blank" class="button">Privacy</a> <a href="https://stibarc.gq/tos.html" target="_blank" class="button">Terms of Service</a><br />
+            <br />
+            Icon by Alex Savon<br />
+            &copy; 2018 STiBaRC<br />
+        </footer>
+    </div>
+</body>
+</html>
